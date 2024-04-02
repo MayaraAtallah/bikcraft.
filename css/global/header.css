@@ -1,5 +1,5 @@
 .header-bg {
-  background: var(--cor-12);
+  background-color: var(--cor-12);
 }
 
 .header {
@@ -8,14 +8,18 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-menu {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  list-style-type: none;
 }
 
 .header-menu a {
@@ -35,7 +39,8 @@
   position: absolute;
 }
 
-.header-menu a:hover:after {
+.header-menu a:hover::after,
+.header-menu a.ativo::after {
   width: 100%;
 }
 
